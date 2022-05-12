@@ -1,0 +1,180 @@
+@import "../variables/variables";
+@import "../sass2/extend";
+@import "../sass2/mixins";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Macondo&display=swap');
+
+
+.grid{
+    display: grid;
+    grid-template-rows: 70px 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header header header"
+                        "header header header header header"
+                        "main main main main main"
+                        "footer footer footer footer footer";
+    background-image: url(../multimedia/foto4.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+body{
+    background-color: black;
+}
+
+.titulo{
+    flex-grow: 1;
+    font-family: 'Bebas Neue', cursive;
+    color: #CACFD2;
+    font-size: 70px;
+    padding: 20px;
+}
+.navegacion{
+    grid-column: 1/6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color4;
+
+    .lista{
+        @include display;
+        li{
+            a{
+                color: $color4;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.button{
+    @extend .boton-index;
+}
+
+.button:hover{
+    height: 80px;
+}
+
+ul{
+    list-style: none;
+}
+
+
+li{
+    padding: 10px;
+}
+
+h2{
+    color: rgb(207, 94, 19);
+    font-size: 32px;
+}
+.titulovid{
+    display: grid;
+    grid-column: 2/6;
+    grid-row: 3/4;
+}
+.main__videos{
+    display: flex;
+    flex-direction: column;
+}
+.main__videos__iframes{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 50px;
+}
+
+.main__personajes{
+    display: flex;
+    flex-direction: column;
+    color: #F4D03F;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 810px){
+
+    .grid{
+        display: grid;
+        grid-template-rows: 70px 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "header header header header"
+                            "header header header header"
+                            "main main main main"
+                            "footer footer footer footer";
+        background-image: url(../multimedia/foto4.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        }
+    
+        .titulo{
+            flex-grow: 1;
+            font-family: 'Bebas Neue', cursive;
+            color: #CACFD2 ;
+            font-size: 50px;
+            padding: 20px;
+        }
+    
+        .button{
+            background-image: linear-gradient(to right, #44130d, #922B21, #D35400, #F4D03F);
+            grid-column: 2/4;
+            grid-row: 4/4;
+            align-self: center;
+            justify-self: center;
+            height: 70px;
+            width: fit-content;
+            color: black;
+            font-size: 32px;
+            border: #641E16;
+            border-radius: 30px;
+            padding: 10px;
+            margin-right: 160px;
+        }
+    
+    
+    }
+    
+    @media screen and (max-width: 696px){
+    
+        .grid{
+            display: grid;
+            grid-template-rows: 70px 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: "header header header"
+                                "header header header"
+                                "main main main"
+                                "footer footer footer";
+            background-image: url(../multimedia/foto4.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            }
+        
+            .titulo{
+                flex-grow: 1;
+                font-family: 'Bebas Neue', cursive;
+                color: #CACFD2 ;
+                font-size: 40px;
+                padding: 10px;
+            }
+        
+            .button{
+                background-image: linear-gradient(to right, #44130d, #922B21, #D35400, #F4D03F);
+                grid-column: 2/3;
+                grid-row: 4/5;
+                align-self: center;
+                justify-self: center;
+                height: 70px;
+                width: fit-content;
+                color: black;
+                font-size: 32px;
+                border: #641E16;
+                border-radius: 30px;
+                padding: 10px;
+                margin-right: 200px;
+            }
+        }
+
+

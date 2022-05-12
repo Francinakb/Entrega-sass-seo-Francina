@@ -1,0 +1,17 @@
+@import "../variables/variables";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Macondo&display=swap');
+
+.boton-index{
+    background-image: linear-gradient(to right, #44130d, #922B21, #D35400, #F4D03F);
+    grid-column: 3/4;
+    grid-row: 4/5;
+    align-self: center;
+    justify-self: center;
+    height: 70px;
+    width: fit-content;
+    color: black;
+    font-size: $size2;
+    border: $color2;
+    border-radius: 30px;
+    padding: 10px;
+}

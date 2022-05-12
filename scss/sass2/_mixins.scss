@@ -1,0 +1,32 @@
+@import "../variables/variables";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Macondo&display=swap');
+
+
+@mixin texto {
+    font-family: $font2;
+    color: $color3;
+    font-size: $size1;
+}
+
+@mixin display {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: 'Teko', sans-serif;
+}
+
+.main__personajes{
+    @include texto;
+    display: flex;
+    flex-direction: column;
+}
+
+.art__comunidad{
+    @include texto;
+    grid-column: 1/4;
+    grid-row: 2/4;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

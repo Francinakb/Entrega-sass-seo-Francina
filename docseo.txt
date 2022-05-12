@@ -1,0 +1,3 @@
+En mi index.html agregue los diversos titulos para cada pages e identificar cada una con su respectivo nombre.
+Descripción: Utilice la etiqueta meta name description y agregué un parrafo con información resumida de mi web: "Dead By Daylight es un video juego de supervivencia y estrategia, en nuestra pagina podras encontrar toda la información necesaria para introducirte en este juego."
+Palabras claves: Utilice la etiqueta meta name keywords y use las palabras "Dead by daylight, Steam, Juegos, Supervivencia". 

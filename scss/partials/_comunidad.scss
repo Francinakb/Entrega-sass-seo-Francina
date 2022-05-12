@@ -1,0 +1,146 @@
+@import "../variables/variables";
+@import "../sass2/extend";
+@import "../sass2/mixins";
+
+.grid2{
+    display: grid;
+    grid-template-rows: 70px 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header header"
+                        "main main main main"
+                        "main main main main"
+                        "footer footer footer footer";
+    background-image: url(../multimedia/foto4.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    .lista{
+        @include display;
+        li{
+            a{
+                color: $color4;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.art__comunidad{
+    grid-column: 1/4;
+    grid-row: 2/4;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tituloDos{
+    background-color: rgb(54, 26, 26);
+    opacity: 0.7;
+    animation-name: animacion;
+    animation-duration: 2s;
+    animation-iteration-count: inherit;
+    animation-delay: 0s;
+}
+
+.lorem{
+    color: #F4D03F;
+    font-size: 20px;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.section__imagenes div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.imagen-dos{
+        width: 400px;
+        margin-top: 80px;
+    }
+
+
+
+@keyframes animacion {
+    0%{
+        color: rgb(207, 195, 19);
+        transform: scale(1);
+    }
+    20%{
+        color: rgb(207, 195, 19);
+        transform: scale(1.2);
+    }
+    30%{
+        color: rgb(207, 195, 19);
+        transform: scale(1.3);
+    }
+
+    40%{
+        color: rgb(207, 94, 19);
+        transform: scale(1.4);
+    }
+    55%{
+        color: rgb(204, 53, 16);
+            transform: scale(1.5)
+    }
+    60%{
+        color: rgb(204, 53, 16);
+        transform: scale(1.4)
+    }
+    75%{
+        color: rgb(214, 32, 25);
+        transform: scale(1.3);
+    }
+    90%{
+        color: rgb(214, 32, 25);
+        transform: scale(1.2);
+    }
+    100%{
+        color: rgb(99, 4, 4);
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 1370px){
+
+
+    .grid2{
+        display: grid;
+        grid-template-rows: 70px 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-image: url(../multimedia/foto4.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+    
+
+.imagen-dos{
+    width: 350px;
+    margin-top: 80px;
+}
+}
+
+
+@media screen and (max-width: 900px){
+
+
+    .grid2{
+        display: grid;
+        grid-template-rows: 70px 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        background-image: url(../multimedia/foto4.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        }
+
+        .imagen-dos{
+            width: 300px;
+            margin-top: 70px;
+        }
+    }
